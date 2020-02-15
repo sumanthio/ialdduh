@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export const Post = ({ id, title, userId }) => {
   // const [post, setPost] = useState([]);
@@ -6,9 +7,9 @@ export const Post = ({ id, title, userId }) => {
 
   return (
     <React.Fragment>
-      <a>
+      <Link to={`/posts/${id}`}>
         <h3>{title}</h3>
-      </a>
+      </Link>
       <span> Posted by: {userId}</span>
     </React.Fragment>
   );

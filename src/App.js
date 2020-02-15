@@ -1,10 +1,13 @@
 import React from "react";
-import { Posts } from "./containers/postsContainer";
+import Routes from "./routes";
+import { BrowserRouter as Router } from "react-router-dom";
 export const App = () => {
   return (
     <React.Fragment>
       <h2>Hi Main</h2>
-      <Posts />
+      <Router>
+        <Routes />
+      </Router>
     </React.Fragment>
   );
 };

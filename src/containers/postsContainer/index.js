@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Post } from "../../components/postComponent";
 
 import { getPosts } from "../../services/placeholderApi";
-export const Posts = () => {
+export const PostsContainer = () => {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     getPosts().then(res => setPosts(res));
@@ -12,7 +12,7 @@ export const Posts = () => {
       <h1>Hackerish News</h1>
       <pre>1. userName component 2. userSearchComponent</pre>
       {posts.map(({ id, title, userId }) => (
-        <Post key={id} title={title} userId={userId}></Post>
+        <Post key={id} id={id} title={title} userId={userId}></Post>
       ))}
     </React.Fragment>
   );
