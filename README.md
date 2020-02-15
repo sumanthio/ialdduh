@@ -6,5 +6,7 @@
       - The jsonplaceholder API isn't really
     - [ ] Debounce the user Input provided we hit backend per OnChange
   - [x] UserDetailsView
-- [ ] Loader
 - [ ] Beautification
+  - [ ] Loader
+  - [ ] Styling
+- [ ] Host on netlify
