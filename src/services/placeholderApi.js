@@ -11,6 +11,10 @@ export const getPostContent = async id => {
   const data = await fetch(`${postsUrl}/${id}`);
   return await data.json();
 };
+export const getAuthorsList = async id => {
+  const data = await fetch(`${usersUrl}`);
+  return await data.json();
+};
 export const getAuthorDetails = async id => {
   const data = await fetch(`${usersUrl}/${id}`);
   return await data.json();

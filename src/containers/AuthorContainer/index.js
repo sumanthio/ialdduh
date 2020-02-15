@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { getAuthorDetails } from "../../services/placeholderApi";
 
 export const AuthorContainer = () => {
@@ -11,6 +11,9 @@ export const AuthorContainer = () => {
 
   return (
     <React.Fragment>
+      <p>
+        <Link to="/users">Back to Users</Link>
+      </p>
       <h2>Author View</h2>
       <h3>{authorData.name}</h3>
       <h3>{authorData.phone}</h3>

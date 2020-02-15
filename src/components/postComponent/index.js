@@ -10,6 +10,7 @@ export const Post = ({ id, title, userId }) => {
       </Link>
       <span>
         {" "}
+        {/*Todo Click on anywhere on the post should take the user to postView*/}
         Posted by: <UserName userId={userId} />
       </span>
     </React.Fragment>
