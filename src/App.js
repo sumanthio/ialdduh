@@ -1,5 +1,10 @@
 import React from "react";
-
+import { Posts } from "./containers/postsContainer";
 export const App = () => {
-  return <h2>Hi Main</h2>;
+  return (
+    <React.Fragment>
+      <h2>Hi Main</h2>
+      <Posts />
+    </React.Fragment>
+  );
 };
