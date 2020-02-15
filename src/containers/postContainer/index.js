@@ -1,24 +1,21 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { getPostContent, getComments } from "../../services/placeholderApi";
-
+import { useParams, Link } from "react-router-dom";
+import { getPostContent } from "../../services/placeholderApi";
+import { Comments } from "../../components/commentComponent";
 export const PostContainer = () => {
   const [post, setPost] = useState([]);
-  const [comments, setComments] = useState([]);
+
   const { postId } = useParams();
   useEffect(() => {
     getPostContent(postId).then(post => setPost(post));
-    getComments(postId).then(comments => setComments(comments));
-  }, []);
+  }, [postId]);
   return (
     <React.Fragment>
+      <Link to="/">Back to posts</Link>
       <h3>{post.title}</h3>
       <span> Posted by: {post.userId}</span>
       <p>{post.title}</p>
-      <h4>Comments:</h4>
-      {comments.map(comment => (
-        <span>{comment.name}</span>
-      ))}
+      <Comments postId={post.id} />
     </React.Fragment>
   );
 };

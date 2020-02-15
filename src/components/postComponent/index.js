@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
+import { UserName } from "../userComponent";
 
 export const Post = ({ id, title, userId }) => {
-  // const [post, setPost] = useState([]);
-  const [userName, setUsername] = useState("");
-
   return (
     <React.Fragment>
       <Link to={`/posts/${id}`}>
         <h3>{title}</h3>
       </Link>
-      <span> Posted by: {userId}</span>
+      <span>
+        {" "}
+        Posted by: <UserName userId={userId} />
+      </span>
     </React.Fragment>
   );
 };

@@ -1,9 +1,18 @@
 import React, { useState, useEffect } from "react";
-
-export const Posts = () => {
+import { getComments } from "../../services/placeholderApi";
+export const Comments = ({ postId }) => {
   const [comments, setComments] = useState([]);
   useEffect(() => {
-    //API Call to get comments
-  }, []);
-  return <h2> list of comments with the author data</h2>;
+    getComments(postId).then(comments => setComments(comments));
+  }, [postId]);
+  return (
+    <React.Fragment>
+      <h4>Comments:</h4>
+      <ul>
+        {comments.map(comment => (
+          <li key={comment.id}>{comment.body}</li>
+        ))}
+      </ul>
+    </React.Fragment>
+  );
 };
