@@ -3,7 +3,7 @@
   - [x] PostView
   - [x] UserSearchView
     - [x] AutoComplete part
-      - The jsonplaceholder API isn't really
+      - The jsonplaceholder API isn't really supporting AutoComplete. Had to do it on the front end
     - [ ] Debounce the user Input provided we hit backend per OnChange
   - [x] UserDetailsView
 - [x] Beautification
