@@ -1,5 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { Typography, Card, CardContent, CardActions } from "@material-ui/core";
+import React, { useState, useEffect } from "./node_modules/react";
+import {
+  Typography,
+  Card,
+  CardContent,
+  CardActions
+} from "./node_modules/@material-ui/core";
 import { getComments } from "../../services/placeholderApi";
 
 export const Comments = ({ postId }) => {

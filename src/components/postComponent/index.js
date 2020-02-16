@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { UserName } from "../userComponent";
+import { UserName } from "../UserComponent";
 import { Typography, Card, CardActions, CardContent } from "@material-ui/core";
 
 export const Post = ({ id, title, userId }) => {

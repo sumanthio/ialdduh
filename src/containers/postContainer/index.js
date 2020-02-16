@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { Grid, Card } from "@material-ui/core";
+import React, { useState, useEffect } from "./node_modules/react";
+import { useParams } from "./node_modules/react-router-dom";
+import { Grid, Card } from "./node_modules/@material-ui/core";
 
 import { getPostContent } from "../../services/placeholderApi";
-import { Comments } from "../../components/commentComponent";
-import { UserName } from "../../components/userComponent";
+import { Comments } from "../../components/CommentComponent";
+import { UserName } from "../../components/UserComponent";
 import { PostsLink } from "../../components/PostsLink";
 export const PostContainer = () => {
   const { postId } = useParams();

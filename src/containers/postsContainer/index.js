@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Post } from "../../components/postComponent";
+import { Post } from "../../components/PostComponent";
 import { getPosts } from "../../services/placeholderApi";
 import { Grid } from "@material-ui/core";
 
