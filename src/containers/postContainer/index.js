@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
-import { Grid, Button, Card } from "@material-ui/core";
+import { useParams } from "react-router-dom";
+import { Grid, Card } from "@material-ui/core";
 
 import { getPostContent } from "../../services/placeholderApi";
 import { Comments } from "../../components/commentComponent";
