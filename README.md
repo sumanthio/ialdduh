@@ -5,6 +5,7 @@
     - [x] AutoComplete part
       - The jsonplaceholder API isn't really
     - [ ] Debounce the user Input provided we hit backend per OnChange
+    - [ ] Refactor the custom
   - [x] UserDetailsView
 - [x] Beautification
   - [ ] Loader
