@@ -10,5 +10,9 @@ export const UserName = ({ userId }) => {
     });
   }, [userId]);
 
-  return <Link to={`users/${userId}`}>{userName}</Link>;
+  return (
+    <div>
+      Posted by: &nbsp;<Link to={`users/${userId}`}>{userName}</Link>
+    </div>
+  );
 };

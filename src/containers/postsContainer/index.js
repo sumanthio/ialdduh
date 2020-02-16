@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Post } from "../../components/postComponent";
 import { getPosts } from "../../services/placeholderApi";
+import { Grid } from "@material-ui/core";
+
 export const PostsContainer = () => {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
@@ -8,10 +10,10 @@ export const PostsContainer = () => {
   }, []);
   return (
     <React.Fragment>
-      <h1>Hackerish News</h1>
-      <pre> 1. Loader</pre>
       {posts.map(({ id, title, userId }) => (
-        <Post key={id} id={id} title={title} userId={userId}></Post>
+        <Grid item xs={11} sm={8} key={id}>
+          <Post id={id} title={title} userId={userId}></Post>
+        </Grid>
       ))}
     </React.Fragment>
   );
