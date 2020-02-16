@@ -8,7 +8,7 @@ export const App = () => {
       <AppBar position="static">
         <Toolbar variant="dense">
           <Typography variant="h6" color="inherit">
-            Hackerish News <pre> 1. Loader</pre>
+            Hackerish News
           </Typography>
         </Toolbar>
       </AppBar>
