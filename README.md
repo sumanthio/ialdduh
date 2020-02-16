@@ -9,4 +9,4 @@
 - [x] Beautification
   - [ ] Loader
   - [x] Styling
-- [ ] Host on netlify
+- [x] Host on netlify @ https://laughing-mccarthy-4d8ad6.netlify.com/
