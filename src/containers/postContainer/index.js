@@ -5,6 +5,7 @@ import { Grid, Button, Card } from "@material-ui/core";
 import { getPostContent } from "../../services/placeholderApi";
 import { Comments } from "../../components/commentComponent";
 import { UserName } from "../../components/userComponent";
+import { PostsLink } from "../../components/PostsLink";
 export const PostContainer = () => {
   const { postId } = useParams();
   const [post, setPost] = useState([]);
@@ -24,9 +25,7 @@ export const PostContainer = () => {
     >
       <Card variant="outlined">
         <Grid item>
-          <Button variant="contained" color="primary" component={Link} to="/">
-            Back to posts
-          </Button>
+          <PostsLink />
         </Grid>
         <Grid item>
           <h3>{post.title}</h3>

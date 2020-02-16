@@ -1,8 +1,18 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import {
+  Card,
+  TextField,
+  Avatar,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText
+} from "@material-ui/core";
 
-export const AutoComplete = ({ authors, set }) => {
+export const AutoComplete = ({ authors }) => {
   const [suggestions, setSuggestions] = useState([]);
+  const [userKey, setUserKey] = useState("");
   // todo: move the initialstate to an outer tree
 
   const authorNames = [
@@ -13,6 +23,7 @@ export const AutoComplete = ({ authors, set }) => {
   const onTextChanged = e => {
     const userKey = e.target.value;
     let suggestions = [];
+    setUserKey(userKey);
     if (userKey.length > 0) {
       suggestions = authorNames.filter(
         ({ username }) =>
@@ -23,20 +34,33 @@ export const AutoComplete = ({ authors, set }) => {
   };
   return (
     <React.Fragment>
-      <input
-        type="text"
-        placeholder="debounce me"
+      <TextField
+        fullWidth
+        id="outlined-basic"
+        label="Search Users"
+        variant="outlined"
+        autoFocus={true}
         onChange={onTextChanged}
-      ></input>
-      <ul>
-        {suggestions.map(({ id, username }) => {
-          return (
-            <li key={id}>
-              <Link to={`/users/${id}`}>{username}</Link>
-            </li>
-          );
-        })}
-      </ul>
+      />
+      {userKey.length > 0 && (
+        <Card>
+          {suggestions.length > 0 && (
+            <List component="nav" aria-label="main mailbox folders">
+              {suggestions.map(({ id, username }) => {
+                return (
+                  <ListItem button component={Link} to={`/users/${id}`}>
+                    <ListItemIcon>
+                      <Avatar />
+                    </ListItemIcon>
+                    <ListItemText>{username}</ListItemText>
+                  </ListItem>
+                );
+              })}
+            </List>
+          )}
+          {suggestions.length === 0 && "No users"}
+        </Card>
+      )}
     </React.Fragment>
   );
 };

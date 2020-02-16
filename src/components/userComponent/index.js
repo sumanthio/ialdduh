@@ -12,7 +12,7 @@ export const UserName = ({ userId }) => {
 
   return (
     <div>
-      Posted by: &nbsp;<Link to={`users/${userId}`}>{userName}</Link>
+      Posted by: &nbsp;<Link to={`/users/${userId}`}>{userName}</Link>
     </div>
   );
 };
